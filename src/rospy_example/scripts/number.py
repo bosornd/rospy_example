@@ -10,7 +10,7 @@ def generate_number(topic):
 
     pub = rospy.Publisher(topic, Int32, queue_size=10)
 
-    rate = rospy.Rate(33) # 33hz
+    rate = rospy.Rate(333) # 333hz
     while not rospy.is_shutdown():
         pub.publish(random.randint(-1, 1))
         rate.sleep()
